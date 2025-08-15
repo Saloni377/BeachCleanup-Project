@@ -55,28 +55,28 @@ function Navbar() {
   }, [user]);
 
   // Fetch unread status
-  useEffect(() => {
-    const fetchUnreadStatus = async () => {
-      if (user?.user_id) {
-        try {
-          const res = await axios.get(`http://localhost:5000/api/notifications/${user.user_id}/unread-count`);
-          setHasUnreadNotifications(res.data.unread > 0);
-        } catch (err) {
-          console.error("❌ Failed to fetch unread status", err);
-        }
+ useEffect(() => {
+  const fetchUnreadStatus = async () => {
+    if (user?.user_id) {
+      try {
+        const res = await axios.get(`http://localhost:5000/api/notifications/${user.user_id}/unread-count`);
+        setHasUnreadNotifications(res.data.unread > 0);
+      } catch (err) {
+        console.error("❌ Failed to fetch unread status", err);
       }
-    };
+    }
+  };
 
-    // ✅ Run on mount
-    fetchUnreadStatus();
+  // ✅ Run on mount
+  fetchUnreadStatus();
 
-    // ✅ Also run when "notifications-read" is dispatched
-    window.addEventListener("notifications-read", fetchUnreadStatus);
+  // ✅ Also run when "notifications-read" is dispatched
+  window.addEventListener("notifications-read", fetchUnreadStatus);
 
-    return () => {
-      window.removeEventListener("notifications-read", fetchUnreadStatus);
-    };
-  }, [user]);
+  return () => {
+    window.removeEventListener("notifications-read", fetchUnreadStatus);
+  };
+}, [user]);
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -102,28 +102,39 @@ function Navbar() {
 
       <ul className="navbar-links">
         <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/events">Our Work</Link></li>
-       <Link to="/leaderboard">Leaderboard</Link>
-      <>
+       
+
+        {user?.role === 'volunteer' && (
+          <>
+          <li><Link to="/events">Our Work</Link></li>
+           <li><Link to="/leaderboard">Leaderboard</Link></li>
+            <li><Link to="/volunteer-dashboard">Dashboard</Link></li>
+            <li><Link to="/waste-logger">Waste Logger</Link></li>
+             <>
     <li><Link to="/my-certificates">My Certificates</Link></li>
     {/* other items */}
   </>
-        {user?.role === 'volunteer' && (
-          <>
-            <li><Link to="/volunteer-dashboard">Dashboard</Link></li>
-            <li><Link to="/waste-logger">Waste Logger</Link></li>
             <li>
               <button className="notification-btn" onClick={handleNotificationClick}>
                 🔔
                 {hasUnreadNotifications && <span className="dot" />}
               </button>
             </li>
+            {user?.role === 'volunteer' && (
+  <>
+
+    {/* other items */}
+  </>
+)}
+
           </>
         )}
 
         {user?.role === 'organizer' && (
           <>
+          <li><Link to="/events">Our Work</Link></li>
             <li><Link to="/admin">Add Event</Link></li>
+            <li><Link to="/leaderboard">Leaderboard</Link></li>
             <li><Link to="/admin/waste-details">Waste Details</Link></li>
             <li><Link to="/admin/image-approval">Waste Approval</Link></li>
             <li>
