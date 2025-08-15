@@ -1,0 +1,153 @@
+/* Navbar.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #004080;
+}
+
+.navbar-logo img {
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0077cc;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-buttons button {
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.login-btn:hover {
+  background-color: #dddddd;
+}
+
+.signup-btn {
+  background-color: #f57c00;
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background-color: #e56b00;
+}
+
+.logout-btn {
+  background-color: #c62828;
+  color: white;
+}
+
+.profile-icon {
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.notification-icon {
+  position: relative;
+  font-size: 20px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.notification-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.notification-btn .dot {
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 10;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px;
+    align-items: flex-start;
+  }
+
+  .navbar-buttons {
+    margin-top: 12px;
+  }
+}
