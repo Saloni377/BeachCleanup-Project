@@ -1,0 +1,62 @@
+[
+  {
+    "question": "How can I register as a volunteer?",
+    "answer": "Go to the Volunteer Registration page, fill out your details, and submit.",
+    "keywords": ["register", "volunteer", "signup", "form", "registration"]
+  },
+  {
+    "question": "How can I join a beach cleaning event?",
+    "answer": "Go to the Events page, find an upcoming event, and click Register.",
+    "keywords": ["event", "join", "beach", "participate"]
+  },
+  {
+    "question": "How do I log the waste I collected?",
+    "answer": "Go to the Waste Logger page, select the event, enter the waste type and quantity, and submit.",
+    "keywords": ["waste", "log", "trash", "garbage", "record"]
+  },
+  {
+    "question": "Eco tips",
+    "answer": " Always carry a reusable bottle and bag when volunteering. Avoid single-use plastics. Sort your waste properly while logging.",
+    "keywords": ["eco", "tips", "green", "environment", "sustainable"]
+  },
+  {
+    "question": "Hello / greeting",
+    "answer": " Hi! I am CleanTogether Assistant. I can help you with events, waste logging, rewards, and eco-friendly tips.",
+    "keywords": ["hello", "hi", "hey", "greetings"]
+  },
+  {
+    "question": "Thanks / appreciation",
+    "answer": " You’re welcome! I’m here to help you with CleanTogether and eco-friendly tips.",
+    "keywords": ["thanks", "thank you", "thx", "appreciate"]
+  },
+  {
+    "question": "Goodbye / farewell",
+    "answer": " Goodbye! Keep volunteering and making our beaches cleaner!",
+    "keywords": ["bye", "goodbye", "see you", "farewell"]
+  },
+  {
+    "question": "How does CleanTogether website work?",
+    "answer": "CleanTogether connects volunteers with beach cleanup events. Volunteers can register, log collected waste, earn rewards, and download certificates. Organizers can create events, track attendance, verify waste, and issue certificates.",
+    "keywords": ["how website works", "how site works", "functionality", "usage"]
+  },
+  {
+    "question": "How to fill the volunteer registration form?",
+    "answer": "Go to the Volunteer Registration page, enter your personal details like name, email, and phone number, then submit the form.",
+    "keywords": ["fill form", "registration", "volunteer form", "how to register"]
+  },
+  {
+    "question": "How to view my rewards and certificates?",
+    "answer": "Visit your Dashboard to see accumulated points, badges, and download certificates earned from completed events and courses.",
+    "keywords": ["rewards", "points", "certificate", "dashboard", "view"]
+  },
+  {
+    "question": "How to participate in an event?",
+    "answer": "Browse the Events page, select an upcoming event, and click the Register button. You will receive a confirmation and can then participate on the scheduled day.",
+    "keywords": ["participate", "event", "join", "register"]
+  },
+  {
+    "question": "How to report issues or ask for help?",
+    "answer": "Use the Contact page to send us a message, and our team will respond to assist you.",
+    "keywords": ["help", "support", "issue", "problem", "contact"]
+  }
+]
