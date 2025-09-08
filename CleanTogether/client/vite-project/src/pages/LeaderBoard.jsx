@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../Styles/Leaderboard.css"; // Make sure this file exists
+import "../Styles/LeaderBoard.css"; // Make sure this file exists
 
 const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
