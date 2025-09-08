@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import API from '../api';   // ✅ use api.js
 import "../Styles/Volunteer.css";
+
 function Signup() {
   const [form, setForm] = useState({
     name: '',
@@ -20,7 +21,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/signup', form); // use full backend URL in Vite
+      await API.post('/api/users/signup', form); // ✅ uses baseURL from api.js
       alert('✅ Signup successful! Please log in.');
       navigate('/login');
     } catch (err) {
