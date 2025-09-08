@@ -1,7 +1,8 @@
 import { useState, useContext } from 'react';
+import API from "../api";
+import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
-import API from '../api';   // ✅ use api.js
 import "../Styles/Volunteer.css";
 
 function Login() {
@@ -17,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await API.post('/api/users/login', form); // ✅ use API instead of axios
+      const res = await axios.post('http://localhost:5000/api/users/login', form);
       const user = res.data.user;
 
       if (!user || !user.user_id || !user.role) {
